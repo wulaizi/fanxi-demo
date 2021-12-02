@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/news.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="display: flex;flex-direction: column; height: 100%;">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">企业站</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav me-auto mb-2 mb-md-0">
+                        </div>
+                        <ul class="navbar-nav   mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link " href="../index.html">
+                                    <img src="../icon/icon_bannerbar_home.png"
+                                        style="-webkit-filter: grayscale(100%);filter: grayscale(100%);opacity: 0.5;"
+                                        width="14" height="14" alt="">
+                                    &nbsp;首页
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../pages/news.html">
+                                    <img src="../icon/icon_bannerbar_news.png" width="14" height="14"
+                                        style="-webkit-filter: grayscale(100%);filter: grayscale(100%);" alt="">
+                                    &nbsp;新闻
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/about.html">
+                                    <img src="../icon/icon_bannerbar_about.png"
+                                        style="-webkit-filter: grayscale(100%);filter: grayscale(100%);opacity: 0.5;"
+                                        width="14" height="14"
+                                        style="-webkit-filter: grayscale(100%);filter: grayscale(100%);" alt="">
+                                    &nbsp;关于我们
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div style="height: 40px;"></div>
+        <div id="container" style="max-width: 1200px;margin: 0 auto;flex: 1;">
+            <div style="height: 30px;"></div>
+            <div class="row news-list-content" id="list-container">
+            </div>
+        </div>
+
+        <div id="phone-css">
+            <div class="page-navigation">
+                <ul class="pagination" id="pagination">
+                    <li class="page-item"><a class="page-link" href="#">上一页</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">下一页</a></li>
+                </ul>
+            </div>
+            <footer class="footer mt-auto py-3 bg-light">
+                <div class="container">
+                    <div class="footer ">
+                        <div
+                            style="background-color: rgb(248, 249, 250);padding-top: 20px;padding-bottom: 20px;border-bottom: 1px solid #f0f0f0;">
+                            <img src="../icon/icon_address.png" width="12" height="12"
+                                alt="">&nbsp;<span>福建市仓山区</span>&nbsp;&nbsp;
+                            <img src="../icon/icon_message.png" width="12" height="12"
+                                alt="">&nbsp;<span>Robin@hotmail.com</span>&nbsp;&nbsp;
+                            <img src="../icon/icon_phone.png" width="12" height="12"
+                                alt="">&nbsp;<span>000-000-000</span>
+                        </div>
+                        <div class="align-center copyright"
+                            style="border-color: rgb(232, 234, 237);background-color: rgb(248, 249, 250);">
+                            <img src="../images/qr_code.jpg" alt="">
+                            <span>&copy; Company,Inc</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/lazysize.js" async=""></script>
+    <script>
+        var pageConfig = {};
+        var pageinationEvent = document.getElementsByClassName('pagination')[0]
+
+        getData(1)
+        pageination();
+
+        function getData(pageNo) {
+            axios({
+                method: "get",
+                url: `https://www.fastmock.site/mock/d8c33ca26a546a3c9be78ee13f714990/t1-0fficial/api/news?page=${pageNo}`,
+            }).then(res => {
+                if (res.data.code == 200 && res.data.data) {
+                    var list = res.data.data;
+                    var meta = res.data.meta;
+                    pageConfig['currentPage'] = meta.current_page;
+                    pageConfig['totalPage'] = Math.ceil(meta.total / meta.per_page)
+                    createListItem(list);
+                    createPagination();
+                }
+            })
+        }
+
+        function pageination() {
+            pageinationEvent.addEventListener('click', e => {
+                let val = e.target.innerText;
+                var { currentPage, totalPage } = pageConfig;
+                if (val == "上一页") {
+                    if (currentPage - 1 > 0) {
+                        currentPage -= 1;
+                        getData(currentPage)
+                    }
+                } else if (val == "下一页") {
+                    if (currentPage < totalPage) {
+                        currentPage = (+currentPage) + 1
+                        getData(currentPage)
+                    }
+                } else {
+                    if (!isNaN(val) && val != currentPage) {
+                        getData(val)
+                    }
+                }
+            })
+        }
+
+
+        function createListItem(listData) {
+            if (!listData) return;
+            let renderListView = "";
+            var content = document.getElementById('list-container');
+            listData.forEach(item => {
+                renderListView += `<div class="news-list-item col-lg-6 col-sm-6 news-list-item-container" code="${item.code}" >
+                        <img src="${item.img}" alt="" class="lazyload">
+                        <div class="list-content-right">
+                            <a href="#">${item.title}</a>
+                            <p>${item.keyword}</p>
+                        </div>
+                    </div>`
+            });
+            content.innerHTML = renderListView;
+            listItemEvent();
+        }
+
+        listItemEvent = () => {
+            let dom = document.getElementsByClassName('news-list-item-container');
+            if (!dom.length) return
+            for (let i = 0; i <= dom.length; i++) {
+                try {
+                    dom[i].addEventListener('click', function (e) {
+                        var code = this.getAttribute('code')
+                        window.location.href = "./details.html?code=" + code;
+                    })
+                } catch (error) {
+
+                }
+            }
+        }
+
+        function createPagination() {
+            var pagination = document.getElementById('pagination')
+            var { currentPage, totalPage } = pageConfig;
+            var renderHtml = `<li class="page-item ${currentPage == 1 ? "disabled" : null}"><a class="page-link" href="#">上一页</a></li>`
+            if (totalPage > 0) {
+                for (let i = 1; i <= totalPage; i++) {
+                    renderHtml += `<li class="page-item ${currentPage == i ? 'active' : ''}"><a class="page-link" href="#">${i}</a></li>`
+                }
+            }
+            renderHtml += `<li class="page-item ${currentPage == totalPage ? 'disabled' : null}"><a class="page-link" href="#">下一页</a></li>`;
+            pagination.innerHTML = renderHtml
+        }
+
+    </script>
+
+</body>
+
+</html>

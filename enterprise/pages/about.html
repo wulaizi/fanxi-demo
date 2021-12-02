@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+    <title>关于我们</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">企业站</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav me-auto mb-2 mb-md-0">
+                    </div>
+                    <ul class="navbar-nav   mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link "  href="../index.html"><img src="../icon/icon_bannerbar_home.png" style="-webkit-filter: grayscale(100%);filter: grayscale(100%);opacity: 0.5;"  width="14" height="14" alt="">&nbsp;首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/news.html"><img src="../icon/icon_bannerbar_news.png" width="14" height="14" style="-webkit-filter: grayscale(100%);filter: grayscale(100%);opacity: 0.5;"  alt="">&nbsp;新闻</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active"  aria-current="page" href="../pages/about.html"><img src="../icon/icon_bannerbar_about.png" width="14" height="14" style="-webkit-filter: grayscale(100%);filter: grayscale(100%);"  alt="">&nbsp;关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="container" style="max-width: 1200px;margin: 0 auto;height: 80%;">
+        <div style="height: 20px;"></div>
+        <div class="about-wrap" style="margin: 20px 20px 0 20px;">
+            <div style="height: 30px;"></div>
+
+            <div class="about-content">
+                <div id="dituContent"></div>
+                <div class="f1 about-info">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p>《复仇者联盟》（Marvel's The
+                        Avengers）是漫威影业出品的一部科幻动作电影，取材自漫威漫画，是漫威电影宇宙的第六部电影，同时也是第一阶段的收官作品。由乔斯·韦登执导，小罗伯特·唐尼、克里斯·埃文斯、马克·鲁法洛、克里斯·海姆斯沃斯、斯嘉丽·约翰逊、杰瑞米·雷纳、汤姆·希德勒斯顿、塞缪尔·杰克逊、克拉克·格雷格、寇碧·史莫德斯、联袂出演。影片于2012年5月5日在中国内地正式上映。
+                    </p>
+                    <div class="about-info-lable">福建市仓山区</div>
+                    <div class="about-info-lable">Robin@hotmail.com</div>
+                    <div class="about-info-lable">000-000-000</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div >
+        <div class="footer" style="padding-top:20px ;">
+            <img src="../icon/icon_address.png" width="12" height="12" alt="">&nbsp;<span>福建市仓山区</span>&nbsp;&nbsp;
+            <img src="../icon/icon_message.png" width="12" height="12" alt="">&nbsp;<span>Robin@hotmail.com</span>&nbsp;&nbsp;
+            <img src="../icon/icon_phone.png" width="12" height="12" alt="">&nbsp;<span>000-000-000</span>
+            <hr style="background-color:#999999;">
+            <div class="align-center copyright" style="border-color: rgb(232, 234, 237);">
+                <img src="../images/qr_code.jpg" alt="">
+                <span>&copy; Company,Inc</span>
+            </div>
+        </div>
+    </div>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        //创建和初始化地图函数：
+        function initMap() {
+            createMap();//创建地图
+            setMapEvent();//设置地图事件
+            addMapControl();//向地图添加控件
+        }
+
+        //创建地图函数：
+        function createMap() {
+            var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+            var point = new BMap.Point(104.079464, 30.546116);//定义一个中心点坐标
+            map.centerAndZoom(point, 17);//设定地图的中心点和坐标并将地图显示在地图容器中
+            window.map = map;//将map变量存储在全局
+        }
+
+        //地图事件设置函数：
+        function setMapEvent() {
+            map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+            map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+            map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+            map.enableKeyboard();//启用键盘上下左右键移动地图
+        }
+
+        //地图控件添加函数：
+        function addMapControl() {
+            //向地图中添加缩放控件
+            var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+            map.addControl(ctrl_nav);
+            //向地图中添加缩略图控件
+            var ctrl_ove = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 });
+            map.addControl(ctrl_ove);
+            //向地图中添加比例尺控件
+            var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+            map.addControl(ctrl_sca);
+        }
+
+
+        initMap();//创建和初始化地图
+    </script>
+</body>
+
+</html>
