@@ -1,6 +1,6 @@
 {
   "name": "shoping-car",
-  "homepage": "https://wulaizi.github.io/shoppingCar",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy":"gh-pages -d public",
+    "deploy":"gh-pages -d build",
     "createIcon": "node script/icon-cmd.js"
   },
   "eslintConfig": {

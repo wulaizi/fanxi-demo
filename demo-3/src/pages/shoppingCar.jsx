@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './shoppingCar.css'
 import { connect } from 'react-redux'
 import { getProductsInfo } from '../action/productsAction'
-import DrawerModal from '../component/drawer/drawer'
+import DrawerModal from '../component/drawer/drawerModal'
 import shoppingCar from '../static/icon/bag-icon.png'
 import { Badge, Avatar, Row ,Col} from 'antd';
 import ShoppingCarSection from './shoppingCarSection/shoppingCarSection'

@@ -3,14 +3,14 @@ import shoppingCar from '../../static/icon/bag-icon.png'
 import { connect } from 'react-redux'
 import { Menu, Dropdown, Button, Spin, Drawer, Badge, Avatar, Radio } from 'antd';
 import shoppingCarUtil from '../../utils/shoppingCarUtil'
-import DrawerFooter from '../../component/drawerFooter/drawerFooter'
+import DrawerFooter from '../drawerFooter/drawerFooter'
 import List from '../list/list'
-import './drawer.css'
+import './drawerModal.css'
 class DrawerModalComponent extends Component {
 
     render() {
         const { onClose, visible, shopppingCarProducts } = this.props;
-        return  <Drawer
+        return <Drawer
                 placement="right"
                 contentWrapperStyle={{ width: "370px", padding: '0' }}
                 visible={visible}
@@ -43,6 +43,7 @@ class DrawerModalComponent extends Component {
                     }
                 </div>
             </Drawer>
+       
         
     }
 }

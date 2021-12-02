@@ -1,4 +1,4 @@
-.drawer-button{
+  .drawer-button{
     position: absolute;
     background-color: #000000;
     border-color:transparent ;
@@ -9,7 +9,7 @@
     top: 0;
     font-size: larger;
   }
-  .drawer .ant-drawer-content{
+   .drawer .ant-drawer-content{
     overflow: visible !important;
    }
   .drawer-button-small{
@@ -24,10 +24,10 @@
    font-size: larger;
    z-index: 1000;
   }
-  aside::-webkit-scrollbar {
+ .aside::-webkit-scrollbar {
     display: none;
   }
-  .header-cart{
+  .drawer  .header-cart{
     color: #ececec;
     box-sizing: border-box;
     text-align: center;
@@ -45,7 +45,7 @@
      height: 60px;
     
    }
-   .drawer-aside-button:hover{
+.drawer-aside-button:hover{
     background-color: #000;
     border-color: transparent;
   }
@@ -54,13 +54,14 @@
     min-height: 100%;
   }
 
-  .drawer-aside::-webkit-scrollbar {
+   .drawer-aside::-webkit-scrollbar {
     display: none;
   }
-  .drawer{
-    position: relative;
+   .drawer{
+    
+    /* position: relative; */
   }
-  .close{
+   .drawer .close{
     position: absolute;
     background-color: #1B1A20;
     /* background-color: red; */
