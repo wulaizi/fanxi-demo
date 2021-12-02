@@ -1,7 +1,7 @@
 import './App.css';
 import Popular from './pages/popular';
 import Battle from './pages/battle';
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route,Redirect } from 'react-router-dom'
 import Header from './component/header/header';
 import Footer from './component/footer/footer';
 import Result from './pages/result';
@@ -23,7 +23,7 @@ class App extends Component {
       <Header currentSelect={this.state.currentSelect} onChange={(item) => this.onChangeSelect(item)} />
       <div className="content">
         <Switch >
-          <Route exact path="/" component={Popular}></Route>
+          <Redirect exact path="/" to="/Popular" />
           <Route path="/Popular" component={Popular}></Route>
           <Route path="/battle" component={Battle}></Route>
           <Route exact path="/result" component={Result}></Route>

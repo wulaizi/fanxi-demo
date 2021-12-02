@@ -1,11 +1,9 @@
 
 import React, { Component } from 'react'
-import { Input, Button } from 'antd';
+import { Input, Button ,message} from 'antd';
 import './battle.css'
 import ApiMethod from '../api/api';
 import {
-    RedditOutlined,
-    SmileOutlined,
     TrophyOutlined,
     CloseOutlined
 } from '@ant-design/icons';
@@ -39,6 +37,11 @@ export default class Battle extends Component {
                         [type]: res
                     })
                 }
+            }).catch(err=>{
+                message.destroy();
+                message.error({content:'内容不存在',style:{
+                    marginTop: '30vh',
+                }});
             }).finally(() => {
                 this.setState({
                     loading: !this.state.loading
@@ -58,8 +61,6 @@ export default class Battle extends Component {
         this.props.history.push(`/result?player1=${leftInputValue}&player2=${rightInputValue}`)
     }
     render() {
-        console.log('props', this.props)
-        console.log('history', this.props.history.push)
         const { leftInputValue, rightInputValue, leftUserInfo, rightUserInfo, loading } = this.state;
         return <div style={{ width: '100%', }}>
             <div className="content">

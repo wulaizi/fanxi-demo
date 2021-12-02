@@ -35,14 +35,20 @@ export default class Result extends Component {
     }
     render() {
         const { player1Info, player2Info } = this.state;
-        let win = player1Info?.public_repos == player2Info?.public_repos 
-        ? "equal" 
-        : player1Info?.public_repos > player2Info?.public_repos
+        let win = player1Info?.public_repos == player2Info?.public_repos
+            ? "equal"
+            : player1Info?.public_repos > player2Info?.public_repos
 
         return <>
             <div className="result-container">
-                <Card win={win == "equal" ? "equal" : win} imageUrl={player1Info?.avatar_url} count={player1Info?.public_repos} />
-                <Card win={win == "equal" ? "equal" : !win} imageUrl={player2Info?.avatar_url} count={player2Info?.public_repos} />
+                <Card
+                    win={win == "equal" ? "equal" : win}
+                    {...player1Info}
+                />
+                <Card
+                    win={win == "equal" ? "equal" : !win}
+                    {...player2Info}
+                />
             </div>
             <div className="card-button">
                 <Button onClick={this.goBack}>Reset</Button>
@@ -53,17 +59,17 @@ export default class Result extends Component {
 
 class Card extends Component {
     render() {
-        const { win, imageUrl, count } = this.props;
+        const { win, avatar_url,public_repos,location,followers,following } = this.props;
         return (
             <div className="card-container">
                 <h2>{win == 'equal' ? "equal" : win ? "Winner" : "Loser"}</h2>
-                <img src={imageUrl ?? ""} alt="" />
-                <span className="core">Scores:{count}</span>
-                <div className="">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <img src={avatar_url ?? ""} alt="" />
+                <span className="core">Scores:{public_repos??0}</span>
+                <div style={{textAlign:"left",width:'100%'}}>
+                    <div><i className="fa fa-location-arrow"></i>{location??0}</div>
+                    <div><i className="fa fa-group"></i>{followers??0}</div>
+                    <div><i className="fa fa-user-plus"></i>{following??0}</div>
+                    <div><i className="fa fa-code"></i>{public_repos??0}</div>
                 </div>
             </div>
         )

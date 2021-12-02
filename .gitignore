@@ -2,3 +2,5 @@ node_modules/
 *.swp
 .vscode/
 *.code-workspace
+demo-2/.DS_Store
+.DS_Store

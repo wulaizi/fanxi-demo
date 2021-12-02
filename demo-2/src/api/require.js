@@ -9,6 +9,7 @@ export function _Get({ url = "", params = {}}) {
         instance.get(url, {
             params
         }).then((res) => {
+            console.log(res)
             if (res.data) {
                 resolve(res.data);
             } else {
