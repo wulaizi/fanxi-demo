@@ -23,8 +23,8 @@ class App extends Component {
       <Header currentSelect={this.state.currentSelect} onChange={(item) => this.onChangeSelect(item)} />
       <div className="content">
         <Switch >
-          <Redirect exact path="/" to="/Popular" />
-          <Route path="/Popular" component={Popular}></Route>
+          {/* <Redirect exact path="/" to="/popular" /> */}
+          <Route path="/popular" component={Popular}></Route>
           <Route path="/battle" component={Battle}></Route>
           <Route exact path="/result" component={Result}></Route>
         </Switch>
