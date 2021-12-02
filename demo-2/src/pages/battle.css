@@ -1,0 +1,88 @@
+.content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.center-item{
+    margin: 0 2px;
+}
+.icon-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.instructions-item{
+    width: 192px;
+    height: 192px;
+    background-color: rgb(238,238,238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.instructions-title{
+    margin: 20px 0;
+}
+.battle-footer{
+    width: 100%;
+   display: flex;
+   flex-direction: row; 
+   margin-bottom: 30px;
+}
+.input-wrap{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 43px;
+}
+.input-main{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+.space{
+    width: 16px;
+}
+.card{
+    background-color: rgb(238,238,238) ;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 100px;
+    overflow: hidden;
+}
+.card-leading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.card-leading span{
+    font-size: 32px;
+    color: rgb(24, 144, 255)
+;
+}
+.card-leading img{
+    width: 64px;
+    height: 64px;
+    border-radius: 20%;
+    margin-right: 20px;
+}
+.card-trailing{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

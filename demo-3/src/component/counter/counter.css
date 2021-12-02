@@ -1,0 +1,23 @@
+.add{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    color:#ffffff;
+}
+.reduce{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(23,21,25);
+    color:#ffffff;
+}
+.counter-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

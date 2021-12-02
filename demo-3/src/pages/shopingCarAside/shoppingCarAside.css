@@ -1,0 +1,12 @@
+.aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.size-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

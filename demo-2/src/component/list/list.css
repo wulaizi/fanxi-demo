@@ -1,0 +1,38 @@
+.list-item{
+    background-color: rgba(0, 0, 0, 0.08);
+    /* width: 23%; */
+    border-radius: 2%;
+    margin-bottom:2.66%;
+    padding: 20px 0;
+    margin: 20px 20px;
+}
+.list-item-top{
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+.list-item-top h2{
+    font-size: 24px;
+    font-weight: bolder;
+ 
+}
+.list-item-top h4 {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+.list-item-bottom{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.list-item-top img{
+    margin-bottom: 20px;
+    
+}
+.list-item-bottom{
+    padding: 0 24px;
+}

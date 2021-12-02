@@ -1,0 +1,43 @@
+.list-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px ;
+}
+.list-lable-conatiner{
+    padding-left: 12px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.remove-container{
+    color: #000000;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.list-lable-conatiner .title{
+    color: #ffffff;
+}
+.list-lable-conatiner .describe{
+    color: rgb(81,80,85);
+}
+.list-lable-price{
+    color: rgb(191,155,55);
+}
+.list-lable-top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex: 1;
+}
+.list-counter{
+    display: flex;
+    flex-direction: row;
+justify-content: space-between;
+}

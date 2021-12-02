@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+      </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">企业站</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav me-auto mb-2 mb-md-0">
+                    </div>
+                    <ul class="navbar-nav   mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html"><img
+                                    src="./icon/icon_bannerbar_home.png" width="14" height="14" alt="">&nbsp;首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/news.html"><img src="./icon/icon_bannerbar_news.png"
+                                    width="14" height="14"
+                                    style="-webkit-filter: grayscale(100%);filter: grayscale(100%);opacity: 0.5;"
+                                    alt="">&nbsp;新闻</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/about.html"><img src="./icon/icon_bannerbar_about.png"
+                                    width="14" height="14"
+                                    style="-webkit-filter: grayscale(100%);filter: grayscale(100%);opacity: 0.5;"
+                                    alt="">&nbsp;关于我们</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img data-src="./images/banner04.jpg" alt="" class="lazyload">
+                </div>
+                <div class="swiper-slide"><img data-src="./images/banner05.jpg" alt="" class="lazyload">
+                </div>
+                <div class="swiper-slide"><img data-src="./images/banner06.jpg" alt="" class="lazyload">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div> -->
+
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" >
+            <div class="carousel-item active">
+                <img data-src="./images/banner04.jpg" width="100%" height="100%" alt="" class="lazyload">
+            </div>
+            <div class="carousel-item">
+                <img data-src="./images/banner05.jpg" width="100%" height="100%" alt="" class="lazyload">
+            </div>
+            <div class="carousel-item">
+                <img data-src="./images/banner06.jpg" width="100%" height="100%" alt="" class="lazyload">
+            </div>
+        </div>
+    </div>
+    <div class="container marketing">
+        <div class="align-center hr-wrap">
+            <div class="line"></div>
+            <h3 style="margin: 0 20px;color: #666666;width: 150px;text-align: center;">
+                服务范围
+            </h3>
+            <div class="line"></div>
+        </div>
+        <div class="icon-container">
+            <div class="" style="text-align: center; min-width: 140px;">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140"
+                    src="./images/section_01_360p.jpg" alt="">
+                <span style="margin: 20px 0;">拯救地球</span>
+            </div>
+            <div class="" style="text-align: center; min-width: 140px;">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140"
+                    src="./images/section_02_360p.jpg" alt="">
+                <span style="margin: 20px 0;">英雄合照</span>
+            </div>
+            <div class="" style="text-align: center; min-width: 140px;">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140"
+                    src="./images/section_03_360p.jpg" alt="">
+                <span style="margin: 20px 0;">寻找原石</span>
+            </div>
+            <div class="" style="text-align: center; min-width: 140px;">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140"
+                    src="./images/section_04_360p.jpg" alt="">
+                <span style="margin: 20px 0;">宇宙旅行</span>
+            </div>
+        </div>
+        <div class="align-center hr-wrap">
+            <div class="line"></div>
+            <h3 style="margin: 0 20px;color: #666666;width: 150px;text-align: center;">
+                团队介绍
+            </h3>
+            <div class="line"></div>
+        </div>
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading"> <span class="text-muted">It’ll blow your
+                        mind.</span></h2>
+                <p class="lead">
+                    来自泰坦星的灭霸为了解决宇宙资源匮乏、人口暴增的问题，集齐了所有无限宝石，一个响指成功地使全宇宙生命随机减半。宇宙由于灭霸的行动而变得满目疮痍，但是五年之后，被困在量子领域的蚁人意外回到现实世界，他的出现为幸存的复仇者点燃了希望。无论前方将遭遇怎样的后果，幸存的复仇者都必须在剩余盟友的帮助下再一次集结，以逆转灭霸的所作所为，彻底恢复宇宙的秩序
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                    src="./images/article_1_360p.jpg" width="500" height="500" alt="">
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">黑寡妇 <span class="text-muted">Black Widow</span></h2>
+                <p class="lead">黑寡妇（Black
+                    来自泰坦星的灭霸为了解决宇宙资源匮乏、人口暴增的问题，集齐了所有无限宝石，一个响指成功地使全宇宙生命随机减半。宇宙由于灭霸的行动而变得满目疮痍，但是五年之后，被困在量子领域的蚁人意外回到现实世界，他的出现为幸存的复仇者点燃了希望。无论前方将遭遇怎样的后果，幸存的复仇者都必须在剩余盟友的帮助下再一次集结，以逆转灭霸的所作所为，彻底恢复宇宙的秩序
+                </p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                    src="./images/article_2_360p.jpg" width="500" height="500" alt="">
+
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">绿巨人 <span class="text-muted">山姆·威尔逊由安东尼·麦凯</span></h2>
+                <p class="lead">
+                    《绿巨人浩克》（Hulk）是环球影业出品的一部超级英雄电影，改编自漫威漫画，由李安执导，艾瑞克·巴纳、詹妮弗·康纳利、尼克·诺特主演，影片于2003年6月20日在美国上映，于2003年10月10日在中国大陆上映。影片讲述科学家布鲁斯班纳在命运安排下成了父亲基因改造实验的试验品，每当情绪激动就变身成绿巨人，这使他成为美国军方的缉捕对象
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                    src="./images/article_3_360p.jpg" width="500" height="500" alt="">
+
+            </div>
+        </div>
+
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">复仇者联盟 <span class="text-muted">汤姆·希德勒斯顿</span></h2>
+                <p class="lead">这位有颜值又有才能的人，在剧中的扮演洛基·劳菲森，美国漫威旗下的超级反派，雷神索尔的弟弟，北欧神话中恶作剧之神。漫威宇宙中的洛基由汤姆·希德勒斯顿出演，一位既有才又有颜的男人。
+                </p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+                    src="./images/article_4_360p.jpg" width="500" height="500" alt="">
+
+            </div>
+        </div>
+
+        <div class="align-center hr-wrap">
+            <div class="line"></div>
+            <h3 style="margin: 0 20px;color: #666666;width: 150px;text-align: center;">
+                新闻动态
+            </h3>
+            <div class="line"></div>
+        </div>
+        <div class="news-wrap">
+            <ul class="row" id="footer-news-item">
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer ">
+        <div class="footer" style="padding-top:20px ;">
+            <img src="./icon/icon_address.png" width="12" height="12" alt="">&nbsp;<span>福建市仓山区</span>&nbsp;&nbsp;
+            <img src="./icon/icon_message.png" width="12" height="12"
+                alt="">&nbsp;<span>Robin@hotmail.com</span>&nbsp;&nbsp;
+            <img src="./icon/icon_phone.png" width="12" height="12" alt="">&nbsp;<span>000-000-000</span>
+            <hr style="background-color:#999999;">
+            <div class="align-center copyright" style="border-color: rgb(232, 234, 237);">
+                <img src="./images/qr_code.jpg" alt="">
+                <span>&copy; Company,Inc</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/lazysize.js" async=""></script>
+    <script>
+        // var swiper = new Swiper('.swiper-container', {
+        //     autoplay: {
+        //         stopOnLastSlide: true,
+        //     },
+        //     pagination: {
+        //         el: '.swiper-pagination',
+        //         clickable: true,
+        //     },
+        // })
+        var temp = "";
+        var content = document.getElementById('footer-news-item')
+        axios.get("https://www.fastmock.site/mock/d8c33ca26a546a3c9be78ee13f714990/t1-0fficial/api/news").then(
+            (res) => {
+                if (res.data.code == 200) {
+                    var list = res.data.data;
+                    var newArray = list.slice(0, 4);
+                    newArray.forEach(element => {
+                        temp += `<li class="col-lg-3 col-sm-3 col-xs-12 col-sm-12">
+                    <div class="home-footer-img">
+                        <img src="${element.img}" alt="">
+                            <p>${element.title}</p>
+                        </div>
+                     </li>`
+                    });
+                    content.innerHTML = temp;
+                }
+            }
+        ).catch((error) => {
+        })
+    </script>
+
+</body>
+
+</html>

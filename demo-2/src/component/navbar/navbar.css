@@ -1,0 +1,13 @@
+.nav-bar ul li{
+    list-style: none;
+    padding: 8px 16px;
+    font-size: 18px;
+}
+.nav-bar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.nav-active{
+    color:#1890ff ;
+}

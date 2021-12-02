@@ -1,0 +1,25 @@
+.content-wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:0px 8px;
+    
+    /* justify-content: space-between; */
+}
+.refresh-wrap{
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+    margin:  0 auto;
+}
+.loadingMore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.github-main .list-item{
+    margin-right: 2.66%;
+}
+.github-main .list-item:nth-child(4n+0){
+    margin-right: 0px;
+}
