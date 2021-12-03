@@ -5,23 +5,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>泛兮Demo</title>
     <style>
+        *{margin: 0;padding: 0;}
+        a{
+            text-decoration: none;
+        }
+        .header{
+          text-align: center;
+          margin: 50px 0;
+          font-size: 30px;
+        }
+        .content{
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+           align-items: center;
+        }
+        .content .item{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(237,113,109);
+           
+        }
+        .content .item a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+        .content .item a:active{
+            background-color: rgb(25, 34, 57);
+        }
+        .content .item a:hover{
+            background-color: rgb(41, 57, 86);
+        }
+        .content .item:not(:last-child){
+            margin-right: 30px;
+        }
+        .footer{
+            height: 50px;
+            margin-top: 30px;
 
+        }
+        .footer a{
+            margin: 0 auto;
+            display: block;
+            background-color: rgb(25, 34, 57);
+            height:100% ;
+            width:55%;
+            padding: 20px;
+            text-align: center;
+            color:#ffffff;
+        }
+        .footer a:hover{
+            background-color: rgb(237,113,109);
+        }
+        .footer a:active{
+            background-color: rgb(155, 251, 225);
+        }
     </style>
 </head>
 
 <body>
     <div>
-        <header>
+        <header class="header">
             <div>
                 泛兮练习
             </div>
         </header>
-        <div>
-            <div><a href="https://wulaizi.github.io/fanxi-demo/enterprise/index.html">企业站</a></div>
-            <div><a href="https://wulaizi.github.io/fanxi-demo/github-hot/">Github热门站</a></div>
-            <div><a href="https://wulaizi.github.io/fanxi-demo/shoppingCar/" target="_blank">购物车</a></div>
+        <div class="content">
+            <div class="item"><a href="https://wulaizi.github.io/fanxi-demo/enterprise/index.html">企业站</a></div>
+            <div class="item"><a href="https://wulaizi.github.io/fanxi-demo/github-hot/">Github热门站</a></div>
+            <div class="item"><a href="https://wulaizi.github.io/fanxi-demo/shoppingCar/" target="_blank">购物车</a></div>
+        </div>
+        <div class="footer">
+            <div class=""><a href="https://github.com/wulaizi/fanxi-demo">代码Github地址</a></div>
         </div>
     </div>
 </body>
