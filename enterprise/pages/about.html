@@ -56,8 +56,8 @@
             <div style="height: 30px;"></div>
 
             <div class="about-content">
-                <div id="dituContent"></div>
-                <div class="f1 about-info">
+                <div id="dituContent" class="col-xs-12 col-sm-6 col-md-6 col-lg-6"></div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <p>《复仇者联盟》（Marvel's The
                         Avengers）是漫威影业出品的一部科幻动作电影，取材自漫威漫画，是漫威电影宇宙的第六部电影，同时也是第一阶段的收官作品。由乔斯·韦登执导，小罗伯特·唐尼、克里斯·埃文斯、马克·鲁法洛、克里斯·海姆斯沃斯、斯嘉丽·约翰逊、杰瑞米·雷纳、汤姆·希德勒斯顿、塞缪尔·杰克逊、克拉克·格雷格、寇碧·史莫德斯、联袂出演。影片于2012年5月5日在中国内地正式上映。
@@ -83,14 +83,13 @@
         </div>
     </div>
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=bvy5AipLqrXi8bAG0W5Lvb6vjNud3gw9"></script>
     <script type="text/javascript">
-
-var map = new BMapGL.Map("dituContent");    // 创建Map实例
-	map.centerAndZoom(new BMapGL.Point(104.079464, 30.546116), 19);  // 初始化地图,设置中心点坐标和地图级别
-	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-	map.setHeading(64.5);
-	map.setTilt(73);
- 
+        // GL版命名空间为BMapGL
+        // 按住鼠标右键，修改倾斜角和角度
+        var map = new BMapGL.Map("dituContent");    // 创建Map实例
+        map.centerAndZoom(new BMapGL.Point(104.079455, 30.546085), 20);  // 初始化地图,设置中心点坐标和地图级别
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
     </script>
 </body>
 
